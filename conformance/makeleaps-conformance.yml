@@ -1,0 +1,42 @@
+generated: '2026-07-20'
+method: derived
+source: https://developer.makeleaps.com/en/api/ (auth tutorials) + apis.yml
+api: MakeLeaps API
+standards:
+- id: oauth2
+  conforms: true
+  evidence: >-
+    OAuth 2.0 client-credentials grant documented; token endpoint
+    https://api.makeleaps.com/user/oauth2/token/ issues Bearer access tokens.
+- id: oidc
+  conforms: false
+  evidence: No OpenID Connect discovery or /.well-known/openid-configuration (404).
+- id: rfc9457
+  conforms: false
+  evidence: No documented application/problem+json error format found in public docs.
+- id: json_api
+  conforms: false
+  evidence: >-
+    API returns JSON but uses a MakeLeaps-specific resource-URL/HAL-like linking
+    convention, not the JSON:API media type.
+- id: fapi
+  conforms: false
+  evidence: No FAPI conformance claim.
+- id: fhir
+  conforms: false
+  evidence: Not a healthcare API.
+- id: scim
+  conforms: false
+  evidence: No SCIM user-provisioning surface documented.
+- id: odata
+  conforms: false
+  evidence: No OData metadata or query conventions documented.
+- id: psd2
+  conforms: false
+  evidence: Not a PSD2/open-banking API; Japan-market invoicing.
+- id: pagination
+  conforms: unknown
+  evidence: Collection endpoints exist (client/, document/) but pagination scheme is not publicly documented.
+- id: idempotency
+  conforms: unknown
+  evidence: No idempotency-key mechanism documented in public tutorials.

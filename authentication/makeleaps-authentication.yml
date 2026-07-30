@@ -1,0 +1,30 @@
+generated: '2026-07-20'
+method: searched
+source: https://developer.makeleaps.com/en/api/tutorial/sending-your-first-document-with-makeleaps/
+api: MakeLeaps API
+base_url: https://api.makeleaps.com
+schemes:
+- id: oauth2_client_credentials
+  type: oauth2
+  flow: clientCredentials
+  description: >-
+    OAuth 2.0 client-credentials grant. The client posts base64(client_id:client_secret)
+    in a Basic Authorization header to the token endpoint to obtain a short-lived
+    Bearer access token, then sends that token as `Authorization: Bearer {access_token}`
+    on every subsequent API request.
+  token_url: https://api.makeleaps.com/user/oauth2/token/
+  token_request:
+    method: POST
+    header: 'Authorization: Basic base64(client_id:client_secret)'
+    content_type: application/x-www-form-urlencoded
+    body: grant_type=client_credentials
+  request_header: 'Authorization: Bearer {access_token}'
+  scopes: []
+  notes: >-
+    Requests are partner-scoped: the authenticated partner's MID is inserted into the
+    path as /api/partner/{partner_mid}/... No explicit OAuth scope parameter is
+    documented in the public tutorials.
+credentials_required:
+- client_id
+- client_secret
+- partner_mid

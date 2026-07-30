@@ -1,0 +1,22 @@
+generated: '2026-07-20'
+method: searched
+source: https://developer.makeleaps.com/en/ + https://status.makeleaps.com/
+api: MakeLeaps API
+status_page:
+  url: https://status.makeleaps.com/
+  present: true
+versioning:
+  scheme: unknown
+  evidence: >-
+    No public versioning policy documented; the API path is partner-scoped
+    (/api/partner/{partner_mid}/...) with no visible version segment.
+deprecation:
+  policy_documented: false
+  sunset_header: unknown
+  evidence: No RFC 8594 Sunset/Deprecation header policy documented in public docs.
+sla:
+  documented: false
+updates:
+  url: https://www.makeleaps.com/updates/
+  api_updates: https://developer.makeleaps.com/en/api/update/
+  note: API update feed exists but had no English entries at time of enrichment.

@@ -1,0 +1,38 @@
+generated: '2026-07-20'
+method: derived
+source: >-
+  Derived from the MakeLeaps API tutorials at https://developer.makeleaps.com/en/api/
+api: MakeLeaps API
+base_url: https://api.makeleaps.com
+auth:
+  style: oauth2
+  flow: clientCredentials
+  request_header: 'Authorization: Bearer {access_token}'
+  token_url: https://api.makeleaps.com/user/oauth2/token/
+  detail: authentication/makeleaps-authentication.yml
+path_scoping:
+  style: partner-scoped
+  pattern: /api/partner/{partner_mid}/{resource}/
+  note: All resource paths are nested under the authenticated partner's MID.
+resource_linking:
+  style: resource-url
+  note: >-
+    Requests reference related resources by full resource URL (e.g. a document's
+    `client` field and a sending order's `recipient_organization` field carry the
+    resource URL, and sending-order items are POSTed to an items_url returned by the
+    parent order) rather than by bare id.
+content_type: application/json
+idempotency:
+  supported: unknown
+  note: No idempotency-key header documented in public tutorials.
+pagination:
+  style: unknown
+  note: Collection endpoints exist but pagination parameters/response envelope are not publicly documented.
+rate_limits:
+  signaling: unknown
+  note: No rate-limit headers or policy documented publicly.
+errors:
+  envelope: unknown
+  detail: No published error catalog / RFC 9457 problem+json format found.
+versioning:
+  detail: lifecycle/makeleaps-lifecycle.yml

@@ -1,0 +1,34 @@
+generated: '2026-07-20'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: www.makeleaps.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct 12 13:38:31 2026 GMT
+  hsts: true
+  hsts_max_age: 31536000
+- host: developer.makeleaps.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct  5 06:41:52 2026 GMT
+  hsts: true
+  hsts_max_age: 31536000
+- host: api.makeleaps.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep 11 07:29:48 2026 GMT
+  hsts: null
+domains:
+- domain: makeleaps.com
+  dnssec: false
+  caa:
+  - 0 issue "pki.goog; cansignhttpexchanges=yes"
+  - 0 issue "sectigo.com"
+  - 0 issue "ssl.com"
+  - 0 issuewild "pki.goog; cansignhttpexchanges=yes"
+  - 0 issuewild "sectigo.com"
+  - 0 issuewild "ssl.com"
+  spf: true
+  dmarc: true
+  dmarc_policy: none

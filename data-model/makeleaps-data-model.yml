@@ -1,0 +1,59 @@
+generated: '2026-07-20'
+method: derived
+source: >-
+  Derived from resources documented in
+  https://developer.makeleaps.com/en/api/tutorial/sending-your-first-document-with-makeleaps/
+api: MakeLeaps API
+note: >-
+  DERIVED from the documented REST resource paths and request bodies (no published
+  OpenAPI). Resources are addressed by resource URLs; documents and sending orders
+  reference clients/documents by URL rather than bare id.
+entities:
+- name: partner
+  path: /api/partner/{partner_mid}/
+  description: The authenticated MakeLeaps account/organization; root of all resources.
+- name: client
+  path: /api/partner/{partner_mid}/client/
+  description: A customer/recipient organization, optionally keyed by client_external_id, with contacts.
+  fields:
+  - client_external_id
+  - contacts
+- name: document
+  path: /api/partner/{partner_mid}/document/
+  description: A business document (invoice, quote, purchase order, receipt, etc.) with line items.
+  fields:
+  - document_number
+  - document_type
+  - client
+  - lineitems
+- name: sending_order
+  path: /api/partner/{partner_mid}/sending/order/
+  description: An order that dispatches one or more documents to a recipient by email or post.
+  fields:
+  - recipient_organization
+  - securesend_selected
+  - to_emails
+- name: sending_order_item
+  description: A document attached to a sending order at a given position.
+  fields:
+  - position
+  - document
+relationships:
+- from: document
+  type: belongs_to
+  to: client
+  via: client
+- from: sending_order
+  type: belongs_to
+  to: client
+  via: recipient_organization
+- from: sending_order
+  type: has_many
+  to: sending_order_item
+- from: sending_order_item
+  type: belongs_to
+  to: document
+  via: document
+- from: client
+  type: has_many
+  to: document

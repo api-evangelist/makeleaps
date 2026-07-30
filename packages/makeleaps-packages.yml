@@ -1,0 +1,30 @@
+generated: '2026-07-20'
+method: searched
+source: https://developer.makeleaps.com/en/apex-sdk/
+api: MakeLeaps API
+summary: >-
+  MakeLeaps publishes one first-party SDK: a Salesforce (Apex) managed package,
+  "MakeLeaps for Salesforce" (ML4SF), documented on the developer portal. No
+  first-party client libraries were found on npm, PyPI, Maven Central, NuGet,
+  RubyGems, Packagist, crates.io, or pkg.go.dev; the public GitHub org
+  (github.com/MakeLeaps) contains only forks of third-party projects, no
+  first-party SDK.
+packages:
+- name: MakeLeaps for Salesforce (ML4SF) SDK
+  ecosystem: salesforce-apex
+  language: Apex
+  official: true
+  description: >-
+    Managed-package SDK for customizing the MakeLeaps for Salesforce integration,
+    letting Salesforce orgs generate and send MakeLeaps documents from Salesforce data.
+  docs: https://developer.makeleaps.com/en/apex-sdk/
+registries_checked:
+- npm
+- PyPI
+- Maven Central
+- NuGet
+- RubyGems
+- Packagist
+- crates.io
+- pkg.go.dev
+- github.com/MakeLeaps
