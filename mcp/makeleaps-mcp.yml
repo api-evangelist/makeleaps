@@ -3,12 +3,10 @@ method: derived
 status: candidate
 source: https://developer.makeleaps.com/en/api/tutorial/create-an-mcp-server-for-your-companys-invoices/
 api: MakeLeaps API
-summary: >-
-  MakeLeaps does not operate an official hosted/remote MCP server. Instead the
-  developer portal publishes a tutorial for building your own local MCP server
-  (Python, fastmcp, run via uv) that wraps the MakeLeaps REST API over your invoice
-  data. The tools below are the four functions documented in that tutorial; they are
-  a DERIVED candidate surface, not an official MakeLeaps-hosted server.
+summary: MakeLeaps does not operate an official hosted/remote MCP server. Instead the developer portal
+  publishes a tutorial for building your own local MCP server (Python, fastmcp, run via uv) that wraps
+  the MakeLeaps REST API over your invoice data. The tools below are the four functions documented in
+  that tutorial; they are a DERIVED candidate surface, not an official MakeLeaps-hosted server.
 transport: stdio
 framework: fastmcp (Python)
 auth: OAuth 2.0 client-credentials (MAKELEAPS_CLIENT_ID / MAKELEAPS_CLIENT_SECRET / MAKELEAPS_PARTNER_MID)
@@ -26,3 +24,9 @@ tools:
 - name: create_invoice
   description: Create a new invoice/document.
   maps_to: POST /api/partner/{partner_mid}/document/
+deployment:
+  mode: none
+  verified: derived
+  tools: 4
+  checked: '2026-08-12'
+  source: catalog MCP census
