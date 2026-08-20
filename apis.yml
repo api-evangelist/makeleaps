@@ -46,6 +46,18 @@ tags:
 - Accounting
 - Finance
 - Payments
+- Document-Management
+- E-Invoicing
+- Software-as-a-Service
+- Japan
+- Ricoh
+tags_raw:
+- Company
+- Invoicing
+- Billing
+- Accounting
+- Finance
+- Payments
 - Document Management
 - E-Invoicing
 - SaaS
@@ -67,6 +79,11 @@ apis:
   humanURL: https://developer.makeleaps.com/en/api/
   baseURL: https://api.makeleaps.com
   tags:
+  - Invoicing
+  - Billing
+  - Documents
+  - Authentication
+  tags_raw:
   - Invoicing
   - Billing
   - Documents
