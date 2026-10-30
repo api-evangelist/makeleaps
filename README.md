@@ -64,6 +64,101 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-MakeLeaps is a company surfaced as a portfolio company of 500-global and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+MakeLeaps is a cloud invoicing, quoting, and payment-management SaaS operated by Meikuriipusu K.K., a Ricoh Group company headquartered in Meguro-ku, Tokyo. The platform lets businesses create ten document types (quotes, invoices, purchase orders, receipts and more), send them electronically or by post in one click, track payments with automated bank reconciliation, and stay compliant with Japan's qualified-invoice law and electronic-bookkeeping regulations. MakeLeaps exposes a REST API at api.makeleaps.com secured with OAuth 2.0 client-credentials, letting partners create clients and documents and drive the sending workflow programmatically, plus a Salesforce (Apex) managed-package SDK and published tutorials for building your own MCP server over your invoice data.
 
-Backed by: 500-global — https://makeleaps.jp
+**Areas:** Company · Invoicing · Billing · Accounting · Finance · Payments · Document Management · E-Invoicing · Software-as-a-Service · Japan · Ricoh
+
+## MakeLeaps on APIs.io
+
+Everything profiled for MakeLeaps is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/makeleaps/](https://apis.io/providers/makeleaps/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [MakeLeaps API](https://apis.io/apis/makeleaps/makeleaps-api/) — REST API for the MakeLeaps cloud invoicing platform. Authenticated with OAuth 2.0 client-credentials against api.makeleaps.com, it exposes partner-scoped…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [makeleaps-mcp.yml](https://apis.io/servers/makeleaps/makeleaps-mcp-yml/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Makeleaps Authentication](https://apis.io/security/makeleaps/makeleaps-authentication/)
+- [Makeleaps Domain Security](https://apis.io/security/makeleaps/makeleaps-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.makeleaps.com/en/)
+- [Documentation](https://developer.makeleaps.com/en/api/)
+- [Getting started](https://developer.makeleaps.com/en/api/tutorial/sending-your-first-document-with-makeleaps/)
+- [API reference](https://developer.makeleaps.com/en/api/)
+- [Pricing](https://www.makeleaps.com/pricing/)
+- [Sign up](https://app.makeleaps.com/home/profile/create/)
+- [Support](https://help.makeleaps.jp/ja/)
+- [Blog](https://www.makeleaps.com/updates/)
+- [Terms of service](https://www.makeleaps.com/%E5%88%A9%E7%94%A8%E8%A6%8F%E7%B4%84/)
+- [Privacy policy](https://www.makeleaps.com/privacy/)
+- [GitHub](https://github.com/MakeLeaps)
+- [Status](https://status.makeleaps.com/)
+
+## API Evangelist rating
+
+**Kin Score 32.5** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 0.0 |
+| Contract governance | 4.5 |
+| Operational transparency | 18.4 |
+| Developer ergonomics | 64.3 |
+| Access clarity | 44.7 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 22.3** — Payments
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/makeleaps/](https://apis.io/providers/makeleaps/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for MakeLeaps: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/makeleaps/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
